@@ -1,4 +1,4 @@
-# Arrays Lab
+=# Arrays Lab
 
 Fork and clone this repo. On your fork, answer and commit the follow questions. When you are finished, submit the link to your repo on Canvas.
 
@@ -9,7 +9,7 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 Create an array of strings called `colors` that contain "orange", "red", "yellow", "turquoise", and "lavender".
 
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
-
+```
 ///////Answer:
     var colors = ["orange", "red", "yellow", "turquoise", "lavender"]
     var ora = colors[0]
@@ -18,25 +18,25 @@ Then, using array subscripting and string interpolation, print out the String `"
 print("\(ora), \(yel), and \(lav) are some of my favorite colors!")
 
 
-
+```
 ## Question 2
 
 Remove "Illinois" and "Kansas" from the array below.
 
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
-
+```
 ///// Answer:
 var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
 let removedStates = westernStates.remove(at: westernStates.count - 1 )
 let removedNextState = westernStates.remove(at: westernStates.count - 1)
 print(westernStates)
-
+```
 ## Question 3
 
 Iterate through the array below. For each state, print out the name of the state, a colon, and whether it is or is not **in the continental United States.**
 
 `let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
-
+```
 ////Answrer:
 let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
 
@@ -47,7 +47,7 @@ for index in 0..<moreStates.count {
         print("\(moreStates[index]): is in the continental United States  ")
     }
 }
-
+```
 ## Question 4
 
 Print out how many non-whitespace characters are in `myString`:
