@@ -54,10 +54,38 @@ Print out how many non-whitespace characters are in `myString`:
 
 `let myString = "This is good practice with Strings!"`
 
-Iterate through the array below. For each sentence, print out how many non-whitespace characters are in it.
+Answer:
+let myString = "This is good practice with Strings!"
+var nonWhiteSpaceCount = 0
+for char in myString {
+    if char.isWhitespace == false  {
+        nonWhiteSpaceCount += 1
+    }
+}
+print(nonWhiteSpaceCount)
+
+// Iterate through the array below. For each sentence, print out how many non-whitespace characters are in it.
 
 `let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]`
 
+Answer:
+let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]
+
+var nonWhiteSpaceCount2 = 0
+
+for string in myFavoriteQuotes {
+    for char in string {
+        if char.isWhitespace == false {
+            nonWhiteSpaceCount2 += 1
+        }
+    }
+        print("\"\(string)\" has (\(nonWhiteSpaceCount2)) non-whiteSpace characters!")
+    }
+// this is exactly what was printed int the console.
+"To be or not to be, that is the question." has (32) non-whiteSpace characters!
+"The only source of knowledge is experience." has (69) non-whiteSpace characters!
+"Mr. Gorbachev, tear down this wall!" has (99) non-whiteSpace characters!
+"Four score and twenty years ago..." has (128) non-whiteSpace characters!
 
 ## Question 5
 
@@ -67,6 +95,29 @@ Iterate through `garden` and place any 🌷 that you find into the `basket`. Rep
 var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
 var basket = [String]()
 ```
+Answer:
+var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
+
+var basket = [String]()
+
+var newGarden:[String] = []
+
+
+for element in garden {
+    if element == "🌷"{
+        basket.append(element)
+    }
+    
+    if element == "🌷" {
+        newGarden = newGarden + ["dirt"]
+    } else {
+        newGarden = newGarden + [element]}
+}
+
+
+print("\(basket). As you can see our basket has \(basket.count) flowers in it!")
+print(newGarden)
+
 
 ## Question 6
 
@@ -79,6 +130,28 @@ The below array represents an unfinished batting lineup for a baseball team. **Y
 
 `var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]`
 
+Answer:
+
+for player in battingLineup {
+    
+    if player == "Jeter" {
+        newBattingLineUp = ["Tejada"] + newBattingLineUp
+    } else if player == "Thomas" {
+        newBattingLineUp = ["Guerrero"] + newBattingLineUp
+    } else {
+        newBattingLineUp = [player] + newBattingLineUp
+    }
+    
+}
+
+for player in newBattingLineUp {
+    newestBattingLineUp = newestBattingLineUp + [player]
+    }
+
+newestBattingLineUp += ["Suzuki"]
+
+
+print(newestBattingLineUp)
 
 ## Question 7
 
@@ -102,6 +175,22 @@ target = 32
 
 //true
 ```
+Answer:
+
+var numbers = [4,2,6,73,32,4,2,1]
+
+var target = 32
+
+var isTrue:Bool = true
+
+for num in numbers {
+    if num == target {
+        print(isTrue)
+    } else {
+       print("Not.true")
+    }
+}
+
 
 Ex. 2
 
@@ -112,6 +201,19 @@ target = 3
 
 //false
 ```
+Answer:
+
+var numbers2 = [32459,2,4,5,1,4,2,1]
+
+var target2 = 3
+
+for num in numbers2 {
+    if num == target2 {
+        print(isTrue)
+    } else {
+        print("Not.true")
+    }
+}
 
 
 ## Question 8
